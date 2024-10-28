@@ -48,7 +48,7 @@ resource "aws_route" "internet_access" {
 # Создание EC2-инстанса
 resource "aws_instance" "my_vm" {
   ami           = "ami-02db68a01488594c5" # Используйте нужный AMI
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
 
   # Указываем подсеть, созданную в VPC
   subnet_id = aws_subnet.my_subnet.id
